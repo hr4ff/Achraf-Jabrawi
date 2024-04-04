@@ -1,0 +1,39 @@
+﻿<Window x:Class="AchrafJabrawi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Controle continu" Height="400" Width="500" Background="#FFB9B9B9">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label Content="3ISI" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+            <StackPanel>
+                <Label Content="Name:"/>
+                <TextBox Width="180"/>
+                <Label Content="Age:"/>
+                <TextBox Width="180"/>
+                <Label Content="Email:"/>
+                <TextBox Width="180"/>
+                <Label Content="Height"/>
+                <Slider Name="heightSlider" Minimum="100" Maximum="250" SmallChange="0.1"/>
+                <Label Content="Weight"/>
+                <Slider Name="weightSlider" Minimum="30" Maximum="150" SmallChange="0.1"/>
+
+            </StackPanel>
+
+
+            
+            <Button Content="Submit" Click="SubmitButton_Click"/>
+        </StackPanel>
+
+
+        <ListBox Name="dataListBox" Grid.Column="1" Margin="0,97,20,145" HorizontalContentAlignment="Stretch"/>
+    </Grid>
+</Window>
